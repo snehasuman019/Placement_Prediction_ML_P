@@ -146,9 +146,10 @@ def predict(student_data: dict):
 # -----------------------------
 @app.post("/predict")
 def predict_api(student_data: dict):
-    result, prob = predict(student_data)
+    result, probability = predict(student_data)
 
     return {
-        "prediction": int(result),
-        "confidence": round(prob * 100, 2)
-    }
+        "prediction": result,
+        "confidence": float(probability)
+}
+
