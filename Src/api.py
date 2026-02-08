@@ -46,3 +46,4 @@ def predict_api(student: dict):
 def home():
     return {"message": "Placement Prediction API is running 🚀"}
 
+#input → API → preprocessing → scaler → model → JSON output
